@@ -1,0 +1,27 @@
+{
+  "convertHtml": {
+    "relativePaths": false
+  },
+  "customRubyPath": null,
+  "debug": false,
+  "domain": null,
+  "followLeader": false,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": [
+    "css"
+  ],
+  "preprocessorScriptOutput": null,
+  "preprocessorStyleOutput": "css",
+  "projectDescription": "My project description",
+  "projectName": "rmkb.vc",
+  "publishedId": null,
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": "localhost:8888/rmkb.vc",
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "simple",
+  "useCompass": false
+}

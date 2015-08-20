@@ -1,0 +1,93 @@
+// ----------------------------------------------------------------------
+  // Colors
+// ----------------------------------------------------------------------
+
+$globalBlue: #273074;
+$globalYellow: #FCEE23;
+$globalRed: #EF3F23;
+
+$white: #FFFFFF;
+$black: #141414; // off-black
+$grey-dark4: #030303;
+$grey-dark3: #212121;
+$grey-dark2: #404040;
+$grey-dark1: #5e5e5e;
+$grey: #7A7A7A;
+$grey-light1: #949494;
+$grey-light2: #AAAAAA;
+$grey-light3: #C4C4C4;
+$grey-light4: #DCDCDC;
+$grey-light5: #EBEBEB;
+$grey-light6: #F2F2F2;
+
+$color-red: #EF3F23; // red
+$color-blue: #4fc0e8; // blue
+$color-yellow: #ffd955; // yellow
+$color-green: #1fbe22; // green
+$color-orange: #fab000; // orange
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$color-primary: #BF1F4F;
+$color-secondary: $grey-dark1;
+$color-tertiary: $globalRed;
+
+$color-alert: $color-red; // red
+$color-info: $color-blue; // blue
+$color-caution: $color-yellow; // yellow
+
+$color-text: $black;
+$color-text-dark2: $grey-dark2;
+$color-text-dark1: $grey-dark1;
+$color-text-light1: $grey-light1;
+// $color-text-light2: $grey-light2;
+$color-text-light3: $grey-light3;
+$color-text-light4: $grey-light4;
+
+$color-link: $globalBlue;
+$color-link-hover: $color-info;
+
+$color-border-black: $black;
+$color-border-dark: $grey-dark2;
+$color-border: $grey;
+$color-border-light2: $grey-light2;
+$color-border-light4: $grey-light4;
+
+$color-bg-white: $white;
+$color-bg-black: $black;
+$color-bg-grey-light1: $grey-light1;
+// $color-bg-grey-light2: $grey-light2;
+$color-bg-grey-light3: $grey-light3;
+$color-bg-grey-light4: $grey-light4;
+$color-bg-grey-light5: $grey-light5;
+
+$color-bg-img: $grey-light6;
+
+$color-rating-stars: $grey-light4;
+$color-rating-stars-active: $color-yellow;
+
+// ----------------------------------------------------------------------
+	// Font Sizes
+// ----------------------------------------------------------------------
+$font-size-1: 0.75rem; // Sticky Header
+$font-size-2: 0.875rem;
+$font-size-3: 1rem; // Basic Font (16px)
+$font-size-4: $font-size-3 * 1.25;
+$font-size-5: $font-size-3 * 2; // product price
+$font-size-6: $font-size-3 * 3; // product name
+$font-size-7: $font-size-3 * 4; // rating summary
+
+$font-weight-bold: 700;
+
+// ----------------------------------------------------------------------
+	// Font Families
+// ----------------------------------------------------------------------
+$font-family-primary: "PT Sans Narrow", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-secondary: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-headers: "Oswald", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+
+// ----------------------------------------------------------------------
+	// Spacing
+// ----------------------------------------------------------------------
+$global-radius: 5px;
+$spacing: 0.9375rem; // default * 2

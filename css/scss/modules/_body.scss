@@ -1,0 +1,141 @@
+// File Name: _body.scss
+// Description: body styles
+// Used by: global.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+* {	-webkit-user-select: none;    
+	-moz-user-select: none;
+	-ms-user-select: none;}
+/* =============================================================
+@   ## Section
+   ============================================================= */
+section {
+	@include rem("padding", $spacing*4, $spacing*2, $spacing*3);
+	@include min-breakpoint(40.063) { // Medium Screens
+		@include rem("padding", $spacing*7, $spacing*2, $spacing*6);
+	}
+	&:first-child {
+		@include rem("padding-top", $spacing*6);
+		@include min-breakpoint(40.063) { // Medium Screens
+			@include rem("padding-top", $spacing*10);
+		}
+	}
+
+	&:nth-child(even) {
+		background-color: $grey-light6;	
+
+		.headline span {background: $grey-light6}
+	}
+}
+
+/* =============================================================
+@   ## About
+   ============================================================= */
+#about .content p {
+	font-size: $font-size-4;
+	color: $color-text-dark1;
+	text-align: justify;
+	@include min-breakpoint(40.063) { // Medium Screens
+		font-size: $font-size-5;
+	}
+}
+
+/* =============================================================
+@   ## Portfolio
+   ============================================================= */
+#portfolio {
+	.block-list li {
+		position: relative;
+		background: $color-bg-grey-light5;
+		text-align: center;
+		border: 1px solid $color-border-light4;
+		padding: $spacing*2;
+		cursor: pointer;
+
+		img {
+			max-width: 400px;
+			max-height: 90px;
+			width:100%;
+		}
+
+		&:before {
+			content: "";
+			position:absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display:block;
+			@include single-transition(all, 0.3s, ease, 0s);
+		}
+
+		&:hover:before {
+			border:{
+				style: solid;
+				@include rem("width", 0.313);
+				color: rgba($color-primary,.7);
+			};
+			background:rgba($white,.05);
+			z-index:3;
+		}
+	}
+}
+
+/* =============================================================
+@   ## Team
+   ============================================================= */
+#team {
+	.block-list li {
+		text-align: center;
+
+		.name {
+			display:block;
+			font-size: $font-size-4;
+			margin-top: $spacing;
+			font-weight: bold;
+		}
+	}
+}
+
+/* =============================================================
+@   ## Team
+   ============================================================= */
+#contact {
+	background-image: url('../img/contact.jpg');
+	background {
+		position: 49% 0px;
+		attachment: scroll;
+		repeat: no-repeat;
+	}
+	color: $white;
+
+	.headline {
+		border-color: $white;
+	}
+	h1, h2 {color: $white;}
+
+
+	fieldset {
+		padding:0;
+		border: 0;
+	}
+
+	input, textarea {
+		background: transparent;
+		border: 0;
+		border-bottom: 1px solid $color-border-light2;
+		box-shadow: none;
+		padding-left: $spacing;
+		color: $white;
+	}
+
+	#submit {
+		border: 1px solid $color-border-light2;
+		@include rem("padding", $spacing, $spacing*3);
+		@include hoverFocus("background", $color-primary);
+		@include hoverFocus("color", $white);
+	}
+}
+
+footer {text-align: center;}

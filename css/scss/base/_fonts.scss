@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'rmkb';
+	src:url('../fonts/rmkb.eot?rp5bn5');
+	src:url('../fonts/rmkb.eot?#iefixrp5bn5') format('embedded-opentype'),
+		url('../fonts/rmkb.ttf?rp5bn5') format('truetype'),
+		url('../fonts/rmkb.woff?rp5bn5') format('woff'),
+		url('../fonts/rmkb.svg?rp5bn5#rmkb') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'rmkb';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	
+	/* Enable Ligatures ================ */
+	letter-spacing: 0;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-h1:before {
+	content: "\e60d";
+}
+.icon-h2:before {
+	content: "\e60e";
+}
+.icon-s1:before {
+	content: "\e600";
+}
+.icon-s2:before {
+	content: "\e608";
+}
