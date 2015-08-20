@@ -59,7 +59,7 @@
 			<div id="nav" data-magellan-expedition="fixed">
 				<div class="row">
 					<div class="logo-nav small-9 medium-3 columns">
-						<!-- // Name // -->
+						<!-- // Logo // -->
 						<a href="#" id="logo" class="icon-logo"><span>rmkb</span><span class="subcolor">ventures</span></a>
 					</div>
 					<div class="sub-nav small-3 medium-9 columns">
@@ -82,28 +82,5 @@
 						</dl>
 					</div>
 				</div>
-<!-- 				<ul class="fixed" id="mobile-menu" style="display: none;">
-					<li data-magellan-arrival="about">
-						<a href="#about">About</a>
-					</li>
-					<li class="" style="">
-						<a href="#work-experience" style="">Experience</a>
-					</li>
-					<li class="" style="">
-						<a href="#education" style="">Education</a>
-					</li>
-					<li class="" style="">
-						<a href="#references" style="">References</a>
-					</li>
-					<li class="" style="">
-						<a href="#skills" style="">Skills</a>
-					</li>
-					<li class="" style="">
-						<a href="#portfolio" style="">Portfolio</a>
-					</li>
-					<li class="" style="">
-						<a href="#contact" style="">Contact</a>
-					</li>
-				</ul> -->
 			</div>
 		</header>

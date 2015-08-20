@@ -90,7 +90,7 @@ body {
 [data-magellan-expedition-clone] {visibility:hidden;}
 
 #nav {
-	@include box-shadow(0px, 0px, 6px, 0px, rgba(0, 0, 0, 0.1));
+	@include box-shadow(0, 0, 6px, 0, rgba(0, 0, 0, 0.1));
 	padding: 0;
 	position: absolute;
 
@@ -156,19 +156,30 @@ body {
 		}
 
 		dl {
+			display: none;
 			position: absolute;
 			width:100%;
-			top:79px;
+			top:45px;
 			left:0;
+			background: $white;
+			overflow: hidden;
+			@include box-shadow(0, 0, 6px, 0, rgba(0, 0, 0, 0.1));
+			@include min-breakpoint(40.063) { // Large Screens
+				top: 60px;
+			}
 			@include min-breakpoint(64.063) { // Large Screens
+				display: block !important;
 				position: relative;
 				float: right;
 				margin:0;
 				width: auto;
+				height: auto;
 				top: auto;
 				left: auto;
+				background: transparent;
+				@include box-shadow(0, 0, 0, 0, rgba(0, 0, 0, 0));
 			}
-			
+
 			dd {
 				position: relative;
 				white-space: nowrap;
@@ -188,27 +199,45 @@ body {
 				}
 
 				a {
-					font-family: 'Oswald', sans-serif;
-					@include rem("padding",1.625, 1);
-					border-bottom: 2px solid transparent;
-					@include rem("line-height", 4.938);
-					@include rem("font-size", $font-size-3);
-					color: $black;
+					@include rem("padding",.5, 2);
+					width: 100%;
+					display: block;
+					background: $white;
+					font-family: $font-family-headers;
 					text-transform: uppercase;
+					border-bottom: 2px solid transparent;
 					border-radius: 0;
-					background: transparent;
+					color: $black;
+					@include rem("font-size", $font-size-3);
 					@include single-transition(all, 0.3s, ease, 0s);
-// @include rem("padding",.5, 2);
-// width: 100%;
-// display: block;
-// background: $white;
-// @include rem("font-size", $font-size-4);
-					&:hover {color: $color-primary;}
+					@include min-breakpoint(64.063) { // Large Screens
+						@include rem("padding",1.6, 1);
+						width: auto;
+						display: inline;
+						background: transparent;
+						@include rem("line-height", 4.938);
+
+						@include rem("font-size", $font-size-3);
+					}
+
+					&:hover {
+						color: $color-primary;
+						background: rgba($color-primary, .1);
+
+						@include min-breakpoint(64.063) { // Large Screens
+							background: transparent;
+						}
+					}
 				}
 
 				&.active a {
-					border-bottom-color: $color-primary;
+					background: $color-bg-grey-light5;
 					@include hoverFocus("color", $black);
+
+					@include min-breakpoint(64.063) { // Large Screens
+						background: transparent;
+						border-bottom-color: $color-primary;
+					}
 				}
 			}
 		}

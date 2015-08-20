@@ -24,10 +24,18 @@ $(function(){
 		}
 	});
 
+	$("#mobile-menu-trigger").on("click", function(e){
+		e.preventDefault();
+		$("#nav dl").slideToggle(300);
+	});
+
+	$("#nav dl a").on("click", function(e){
+		$("#nav dl").slideUp(300);
+	});
+
 	resizeFullscreenDiv();
 	
-	console.log('Looking for something?');
-	console.log('Type "i love rmkb" for a surprise. =D');
+	console.log('Type "our rmkb" for a little surprise. =D');
 });
 
 
@@ -42,10 +50,26 @@ function resizeFullscreenDiv() {
 
 var down = [];
 $(document).keydown(function(e) {
-	if(e.keyCode == 73 || down.length >= 11){down = [];}
+	if(e.keyCode == 79 || down.length >= 9){down = [];}
 	if(e.keyCode != 16){down.push(e.keyCode);}
 }).keyup(function(e) {
-	if(down[0] == 73 && down[1] == 32 && down[2] == 76 && down[3] == 79 && down[4] == 86 && down[5] == 69 && down[6] == 32 && down[7] == 82 && down[8] == 77 && down[9] == 75 && down[10] == 66){
-		$('#modal').foundation('reveal', 'open', '_fun.php');
+	console.log(down);
+	if(down[0] == 79 && down[1] == 85 && down[2] == 82 && down[3] == 32){
+		teamli = $("#team ul");
+		if(!down[4]){
+			$(document).scrollTop( $("#team").offset().top );
+		} else if(down[4] == 82 && !down[5]){ // R
+			teamli.children(":nth-child(1)").find("span img").attr("src","img/team/ronald2.jpg");
+		} else if(down[4] == 82 && down[5]== 77 && !down[6]){ // M
+			teamli.children(":nth-child(2)").find("span img").attr("src","img/team/michael2.jpg");
+		} else if(down[4] == 82 && down[5]== 77 && down[6] == 75 && !down[7]){ // K
+			teamli.children(":nth-child(3)").find("span img").attr("src","img/team/kevin2.jpg");
+		} else if(down[4] == 82 && down[5]== 77 && down[6] == 75 && down[7] == 66){ // B
+			teamli.children(":nth-child(4)").find("span img").attr("src","img/team/benson2.jpg");
+		}
+
+	}
+	if(down[5] == 82 && down[6] == 77 && down[7] == 75 && down[8] == 66){
+
 	}
 });

@@ -175,9 +175,9 @@ body {
   visibility: hidden; }
 
 #nav {
-  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
   padding: 0;
   position: absolute; }
   #nav .row {
@@ -234,18 +234,33 @@ body {
           line-height: 60px;
           line-height: 3.75rem; } }
     #nav .sub-nav dl {
+      display: none;
       position: absolute;
       width: 100%;
-      top: 79px;
-      left: 0; }
+      top: 45px;
+      left: 0;
+      background: #FFFFFF;
+      overflow: hidden;
+      -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1); }
+      @media only screen and (min-width: 40.063em) {
+        #nav .sub-nav dl {
+          top: 60px; } }
       @media only screen and (min-width: 64.063em) {
         #nav .sub-nav dl {
+          display: block !important;
           position: relative;
           float: right;
           margin: 0;
           width: auto;
+          height: auto;
           top: auto;
-          left: auto; } }
+          left: auto;
+          background: transparent;
+          -webkit-box-shadow: 0 0 0 0 transparent;
+          -moz-box-shadow: 0 0 0 0 transparent;
+          box-shadow: 0 0 0 0 transparent; } }
       #nav .sub-nav dl dd {
         position: relative;
         white-space: nowrap;
@@ -263,28 +278,47 @@ body {
             height: 79px;
             border: 0; } }
         #nav .sub-nav dl dd a {
-          font-family: 'Oswald', sans-serif;
-          padding: 26px 16px;
-          padding: 1.625rem 1rem;
+          padding: 8px 32px;
+          padding: 0.5rem 2rem;
+          width: 100%;
+          display: block;
+          background: #FFFFFF;
+          font-family: "Oswald", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+          text-transform: uppercase;
           border-bottom: 2px solid transparent;
-          line-height: 79.008px;
-          line-height: 4.938rem;
+          border-radius: 0;
+          color: #141414;
           font-size: 16px;
           font-size: 1rem;
-          color: #141414;
-          text-transform: uppercase;
-          border-radius: 0;
-          background: transparent;
           -webkit-transition: all 0.3s ease 0s;
           -moz-transition: all 0.3s ease 0s;
           -o-transition: all 0.3s ease 0s;
           transition: all 0.3s ease 0s; }
+          @media only screen and (min-width: 64.063em) {
+            #nav .sub-nav dl dd a {
+              padding: 25.6px 16px;
+              padding: 1.6rem 1rem;
+              width: auto;
+              display: inline;
+              background: transparent;
+              line-height: 79.008px;
+              line-height: 4.938rem;
+              font-size: 16px;
+              font-size: 1rem; } }
           #nav .sub-nav dl dd a:hover {
-            color: #BF1F4F; }
+            color: #BF1F4F;
+            background: rgba(191, 31, 79, 0.1); }
+            @media only screen and (min-width: 64.063em) {
+              #nav .sub-nav dl dd a:hover {
+                background: transparent; } }
         #nav .sub-nav dl dd.active a {
-          border-bottom-color: #BF1F4F; }
+          background: #EBEBEB; }
           #nav .sub-nav dl dd.active a:hover, #nav .sub-nav dl dd.active a:focus {
             color: #141414; }
+          @media only screen and (min-width: 64.063em) {
+            #nav .sub-nav dl dd.active a {
+              background: transparent;
+              border-bottom-color: #BF1F4F; } }
 
 * {
   -webkit-user-select: none;
