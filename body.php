@@ -93,13 +93,14 @@
 					suscipit risus. Cras vel lorem nec sem condimentum pharetra sed at enim.</p>
 				</div>
 				<div class="small-12 medium-8 columns">
-					<form id="contact-form" name="contact-form" method="post" action="send.php"> 
+					<form id="contact-form" name="contact-form" method="post" action="http://formspree.io/hello@rmkb.vc"> 
 						<fieldset>
 							<div id="formstatus"></div>
-							<input id="name" type="text" name="name" value="" placeholder="Enter your name here">
-							<input id="email" type="text" name="email" value="" placeholder="Your email address">
-							<input id="subject" type="text" name="subject" value="" placeholder="Subject">
+							<input id="name" type="text" name="name" placeholder="Enter your name here">
+							<input id="email" type="text" name="_replyto" placeholder="Your email address">
+							<input id="subject" type="text" name="_subject" placeholder="Subject">
 							<textarea id="message" name="message" rows="7" cols="25" placeholder="Message"></textarea>
+							<input type="text" name="_gotcha" style="display:none" />
 							<input id="submit" type="submit" name="submit" value="Send!">
 						</fieldset>
 					</form>
