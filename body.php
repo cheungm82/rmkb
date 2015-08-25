@@ -88,8 +88,9 @@
 				<div class="row">
 					<div class="small-12 medium-4 columns">
 						<h2 class="text-uppercase">Get in touch</h2>
-						<p>Nullam et ante sit amet tortor sollicitudin congue. Maecenas ut pharetra sapien. Suspendisse nec 
-						suscipit risus. Cras vel lorem nec sem condimentum pharetra sed at enim.</p>
+						<p>"Sometimes all you need is 20 seconds of insane courage... and I promise you, something great will come of it."
+						<br /> - Benjamin Mee (I bought a Zoo)</p>
+						<p>Type a message, press the send button and great things will happen!</p>
 					</div>
 					<div class="small-12 medium-8 columns">
 						<form id="contact-form" name="contact-form" method="post" action="http://formspree.io/hello@rmkb.vc"> 
