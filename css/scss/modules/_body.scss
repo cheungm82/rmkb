@@ -47,18 +47,26 @@ section {
 #portfolio {
 	.block-list li {
 		position: relative;
-		background: $color-bg-grey-light5;
 		text-align: center;
 		border: 1px solid $color-border-light4;
-		padding: $spacing*2;
-		cursor: pointer;
+		padding: 0;
+		// cursor: pointer;
 
-		img {
-			max-width: 400px;
-			max-height: 90px;
-			width:100%;
+		.folio_img {
+			padding: $spacing*2;
+			background: $color-bg-grey-light5;
+			// margin-bottom: $spacing*2;
+			img {
+				max-width: 400px;
+				max-height: 90px;
+				width:100%;
+			}
 		}
 
+		.folio_desc {
+			overflow: hidden;
+			height: 0;
+		}
 		&:before {
 			content: "";
 			position:absolute;
@@ -70,16 +78,57 @@ section {
 			@include single-transition(all, 0.3s, ease, 0s);
 		}
 
-		&:hover:before {
-			border:{
-				style: solid;
-				@include rem("width", 0.313);
-				color: rgba($color-primary,.7);
-			};
-			background:rgba($white,.05);
-			z-index:3;
-		}
+		// &:hover:before {
+		// 	border:{
+		// 		style: solid;
+		// 		@include rem("width", 0.313);
+		// 		color: rgba($color-primary,.7);
+		// 	};
+		// 	background:rgba($white,.05);
+		// 	z-index:3;
+		// }
 	}
+	// .block-list.detail li {
+	// 	display: none;
+	// 	background: $white;
+
+	// 	&.active {
+	// 		display: block;
+	// 		width: 100%;
+	// 		@include single-transition(all, 0.5s, ease, 0s);
+
+	// 		.folio_img {
+
+	// 		}
+
+	// 		.folio_desc {
+	// 			height: auto;
+	// 			min-height: 310px;
+
+	// 			@include single-transition("height", 0.5s, ease, 0s);
+	// 		}
+		
+	// 		&:before {
+	// 			border:{
+	// 				style: solid;
+	// 				@include rem("width", 0.313);
+	// 				color: rgba($color-primary,.7);
+	// 			};
+	// 			background:rgba($white,.05);
+	// 			z-index:3;
+	// 		}
+
+	// 		&:after {
+	// 			content: "";
+	// 			position:absolute;
+	// 			top: 0;
+	// 			bottom: 0;
+	// 			left: 0;
+	// 			background: $color-bg-grey-light5;
+	// 			width: 25%;
+	// 		}
+	// 	}
+	// }
 }
 
 /* =============================================================

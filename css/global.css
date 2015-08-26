@@ -363,15 +363,19 @@ section {
    ============================================================= */
 #portfolio .block-list li {
   position: relative;
-  background: #EBEBEB;
   text-align: center;
   border: 1px solid #DCDCDC;
-  padding: 1.875rem;
-  cursor: pointer; }
-  #portfolio .block-list li img {
-    max-width: 400px;
-    max-height: 90px;
-    width: 100%; }
+  padding: 0; }
+  #portfolio .block-list li .folio_img {
+    padding: 1.875rem;
+    background: #EBEBEB; }
+    #portfolio .block-list li .folio_img img {
+      max-width: 400px;
+      max-height: 90px;
+      width: 100%; }
+  #portfolio .block-list li .folio_desc {
+    overflow: hidden;
+    height: 0; }
   #portfolio .block-list li:before {
     content: "";
     position: absolute;
@@ -384,13 +388,6 @@ section {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
-  #portfolio .block-list li:hover:before {
-    border-style: solid;
-    border-width: 5.008px;
-    border-width: 0.313rem;
-    border-color: rgba(191, 31, 79, 0.7);
-    background: rgba(255, 255, 255, 0.05);
-    z-index: 3; }
 
 /* =============================================================
 @   ## Team
