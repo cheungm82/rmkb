@@ -361,33 +361,49 @@ section {
 /* =============================================================
 @   ## Portfolio
    ============================================================= */
-#portfolio .block-list li {
-  position: relative;
-  text-align: center;
-  border: 1px solid #DCDCDC;
-  padding: 0; }
-  #portfolio .block-list li .folio_img {
-    padding: 1.875rem;
-    background: #EBEBEB; }
-    #portfolio .block-list li .folio_img img {
-      max-width: 400px;
-      max-height: 90px;
-      width: 100%; }
-  #portfolio .block-list li .folio_desc {
-    overflow: hidden;
-    height: 0; }
-  #portfolio .block-list li:before {
-    content: "";
+#portfolio {
+  position: relative; }
+  #portfolio > span {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    display: block;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s; }
+    background-color: rgba(20, 20, 20, 0.5);
+    z-index: 2;
+    cursor: pointer; }
+  #portfolio .block-list li {
+    position: relative;
+    text-align: center;
+    border: 1px solid #DCDCDC;
+    padding: 0; }
+    #portfolio .block-list li .folio_img {
+      padding: 1.875rem;
+      background: #EBEBEB; }
+      #portfolio .block-list li .folio_img img {
+        max-width: 400px;
+        max-height: 90px;
+        width: 100%; }
+    #portfolio .block-list li .folio_desc {
+      overflow: hidden;
+      height: 0;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+    #portfolio .block-list li:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
 
 /* =============================================================
 @   ## Team

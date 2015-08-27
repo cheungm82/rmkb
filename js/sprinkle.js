@@ -4,8 +4,8 @@ if (size == 'smartphone') {
     // Load some more content.
 }
 */
-var sliderH; /* Slider Height */
 
+var sliderH; /* Slider Height */
 
 $(window).bind('resize',function() {
 	/* do something when browser window resizes */
@@ -16,6 +16,7 @@ $(window).bind('resize',function() {
 });
 
 $(function(){
+	// ZURB Magellan plugin - Top nav bar
 	$(document).foundation({
 		"magellan-expedition": {
 			active_class: 'active', // specify the class used for active sections
@@ -24,6 +25,7 @@ $(function(){
 		}
 	});
 
+	// Triggers menu in when on smaller screens
 	$("#mobile-menu-trigger").on("click", function(e){
 		e.preventDefault();
 		$("#nav dl").slideToggle(300);
@@ -33,8 +35,46 @@ $(function(){
 		$("#nav dl").slideUp(300);
 	});
 
+	// Portfolio company information modal trigger
+	// $(".block-list li").on("click", function(e){
+	// 	if(!$(this).hasClass('active')){
+	// 		$(this).addClass('active').parent().addClass('detail');
+	// 		$(this).find('.folio_img').addClass('small-12 large-3 columns');
+	// 		$(this).find('.folio_desc').addClass('small-12 large-9 columns');
+	// 		$('#portfolio > span').slideDown('fast');
+
+	// 		// change company logo to colored version
+	// 		var imgurl = $(this).find('.folio_img img').attr('src');
+	// 		imgurl = imgurl.split('.');
+	// 		$(this).find('.folio_img img').attr('src',imgurl[0] + '2.' + imgurl[1]);
+	// 	}
+	// });
+
+	$('#portfolio > span').on("click", function(e){
+		var list = $(".block-list li.active");
+		if(list.hasClass('active')){
+			list.removeClass('active').parent().removeClass('detail');
+			list.find('.folio_img').removeClass('small-12 large-3 columns');
+			list.find('.folio_desc').removeClass('small-12 large-9 columns');
+			$('#portfolio > span').slideUp('fast');
+
+			// change company logo to grey version
+			var imgurl = list.find('.folio_img img').attr('src');
+			imgurl = imgurl.split('2');
+			list.find('.folio_img img').attr('src',imgurl[0] + imgurl[1]);
+		}
+	});
+
+	// Other Functions
 	resizeFullscreenDiv();
 	
+	preload([
+		'img/team/ronald2.jpg',
+		'img/team/michael2.jpg',
+		'img/team/kevin2.jpg',
+		'img/team/benson2.jpg'
+	]);
+
 	console.log('Type "our rmkb" for a little surprise. =D');
 });
 
@@ -73,3 +113,9 @@ $(document).keydown(function(e) {
 
 	}
 });
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+    });
+}

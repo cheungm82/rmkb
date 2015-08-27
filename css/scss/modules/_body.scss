@@ -45,6 +45,20 @@ section {
 @   ## Portfolio
    ============================================================= */
 #portfolio {
+	position: relative;
+
+	> span {
+		display: none;
+		position:absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba($black, .5);
+		z-index: 2;
+		cursor: pointer;
+	}
+
 	.block-list li {
 		position: relative;
 		text-align: center;
@@ -55,7 +69,6 @@ section {
 		.folio_img {
 			padding: $spacing*2;
 			background: $color-bg-grey-light5;
-			// margin-bottom: $spacing*2;
 			img {
 				max-width: 400px;
 				max-height: 90px;
@@ -66,7 +79,9 @@ section {
 		.folio_desc {
 			overflow: hidden;
 			height: 0;
+			@include single-transition(all, 0.3s, ease, 0s);
 		}
+
 		&:before {
 			content: "";
 			position:absolute;
@@ -88,24 +103,25 @@ section {
 		// 	z-index:3;
 		// }
 	}
+	
 	// .block-list.detail li {
 	// 	display: none;
 	// 	background: $white;
+	// 	z-index: 3;
+	// 	@include single-transition(all, 0.3s, ease, 0s);
+
 
 	// 	&.active {
 	// 		display: block;
 	// 		width: 100%;
-	// 		@include single-transition(all, 0.5s, ease, 0s);
 
 	// 		.folio_img {
-
+	// 			z-index: 2;
 	// 		}
 
 	// 		.folio_desc {
 	// 			height: auto;
 	// 			min-height: 310px;
-
-	// 			@include single-transition("height", 0.5s, ease, 0s);
 	// 		}
 		
 	// 		&:before {
