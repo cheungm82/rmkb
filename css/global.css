@@ -384,6 +384,10 @@ section {
         max-width: 400px;
         max-height: 90px;
         width: 100%; }
+      #portfolio .block-list li .folio_img .folio_details {
+        display: none; }
+        #portfolio .block-list li .folio_img .folio_details span {
+          color: #7A7A7A; }
     #portfolio .block-list li .folio_desc {
       overflow: hidden;
       height: 0;
@@ -403,6 +407,52 @@ section {
       -moz-transition: all 0.3s ease 0s;
       -o-transition: all 0.3s ease 0s;
       transition: all 0.3s ease 0s; }
+    #portfolio .block-list li:hover:before {
+      border-style: solid;
+      border-width: 5.008px;
+      border-width: 0.313rem;
+      border-color: rgba(191, 31, 79, 0.7);
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 3; }
+  #portfolio .block-list.detail li {
+    display: none;
+    background: #FFFFFF;
+    z-index: 3;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+    #portfolio .block-list.detail li.active {
+      display: block;
+      width: 100%; }
+      #portfolio .block-list.detail li.active .folio_img {
+        z-index: 4;
+        background: transparent; }
+        #portfolio .block-list.detail li.active .folio_img .folio_details {
+          margin-top: 0.9375rem;
+          display: block; }
+      #portfolio .block-list.detail li.active .folio_desc {
+        height: auto;
+        min-height: 310px;
+        padding: 1.875rem;
+        text-align: justify; }
+        #portfolio .block-list.detail li.active .folio_desc p {
+          font-size: 1.25rem; }
+      #portfolio .block-list.detail li.active:before {
+        border-style: solid;
+        border-width: 5.008px;
+        border-width: 0.313rem;
+        border-color: rgba(191, 31, 79, 0.7);
+        background: rgba(255, 255, 255, 0.05);
+        z-index: 3; }
+      #portfolio .block-list.detail li.active:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: #EBEBEB;
+        width: 25%; }
 
 /* =============================================================
 @   ## Team

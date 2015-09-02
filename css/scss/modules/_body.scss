@@ -75,6 +75,12 @@ section {
 				max-height: 90px;
 				width:100%;
 			}
+			.folio_details {
+				display: none;
+				span {
+					color: $color-text-light1;
+				}
+			}
 		}
 
 		.folio_desc {
@@ -94,58 +100,69 @@ section {
 			@include single-transition(all, 0.3s, ease, 0s);
 		}
 
-		// &:hover:before {
-		// 	border:{
-		// 		style: solid;
-		// 		@include rem("width", 0.313);
-		// 		color: rgba($color-primary,.7);
-		// 	};
-		// 	background:rgba($white,.05);
-		// 	z-index:3;
-		// }
+		&:hover:before {
+			border:{
+				style: solid;
+				@include rem("width", 0.313);
+				color: rgba($color-primary,.7);
+			};
+			background:rgba($white,.05);
+			z-index:3;
+		}
 	}
 	
-	// .block-list.detail li {
-	// 	display: none;
-	// 	background: $white;
-	// 	z-index: 3;
-	// 	@include single-transition(all, 0.3s, ease, 0s);
+	.block-list.detail li {
+		display: none;
+		background: $white;
+		z-index: 3;
+		@include single-transition(all, 0.3s, ease, 0s);
 
+		&.active {
+			display: block;
+			width: 100%;
 
-	// 	&.active {
-	// 		display: block;
-	// 		width: 100%;
+			.folio_img {
+				z-index: 4;
+				background: transparent;
 
-	// 		.folio_img {
-	// 			z-index: 2;
-	// 		}
+				.folio_details {
+					margin-top: $spacing;
+					display: block;
+				}
+			}
 
-	// 		.folio_desc {
-	// 			height: auto;
-	// 			min-height: 310px;
-	// 		}
+			.folio_desc {
+				height: auto;
+				min-height: 310px;
+				padding: $spacing*2;
+				text-align: justify;
+
+				p {
+					font-size: $font-size-4;
+				}
+			}
 		
-	// 		&:before {
-	// 			border:{
-	// 				style: solid;
-	// 				@include rem("width", 0.313);
-	// 				color: rgba($color-primary,.7);
-	// 			};
-	// 			background:rgba($white,.05);
-	// 			z-index:3;
-	// 		}
+			&:before {
+				border:{
+					style: solid;
+					@include rem("width", 0.313);
+					color: rgba($color-primary,.7);
+				};
+				background:rgba($white,.05);
+				z-index:3;
+			}
 
-	// 		&:after {
-	// 			content: "";
-	// 			position:absolute;
-	// 			top: 0;
-	// 			bottom: 0;
-	// 			left: 0;
-	// 			background: $color-bg-grey-light5;
-	// 			width: 25%;
-	// 		}
-	// 	}
-	// }
+			&:after {
+				content: "";
+				position:absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				background: $color-bg-grey;
+				width: 25%;
+			}
+		}
+	}
 }
 
 /* =============================================================

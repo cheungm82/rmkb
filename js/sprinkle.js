@@ -36,19 +36,19 @@ $(function(){
 	});
 
 	// Portfolio company information modal trigger
-	// $(".block-list li").on("click", function(e){
-	// 	if(!$(this).hasClass('active')){
-	// 		$(this).addClass('active').parent().addClass('detail');
-	// 		$(this).find('.folio_img').addClass('small-12 large-3 columns');
-	// 		$(this).find('.folio_desc').addClass('small-12 large-9 columns');
-	// 		$('#portfolio > span').slideDown('fast');
+	$(".block-list li").on("click", function(e){
+		if(!$(this).hasClass('active')){
+			$(this).addClass('active').parent().addClass('detail');
+			$(this).find('.folio_img').addClass('small-12 large-3 columns');
+			$(this).find('.folio_desc').addClass('small-12 large-9 columns');
+			$('#portfolio > span').slideDown('fast');
 
-	// 		// change company logo to colored version
-	// 		var imgurl = $(this).find('.folio_img img').attr('src');
-	// 		imgurl = imgurl.split('.');
-	// 		$(this).find('.folio_img img').attr('src',imgurl[0] + '2.' + imgurl[1]);
-	// 	}
-	// });
+			// change company logo to colored version
+			var imgurl = $(this).find('.folio_img img').attr('src');
+			imgurl = imgurl.split('.');
+			$(this).find('.folio_img img').attr('src',imgurl[0] + '2.' + imgurl[1]);
+		}
+	});
 
 	$('#portfolio > span').on("click", function(e){
 		var list = $(".block-list li.active");
