@@ -69,10 +69,10 @@ h1, h2, h3, h4, h5, h6 {
 .headline {
   position: relative;
   display: inline-block;
-  border: 1px solid #141414;
+  border: 1px solid #000000;
   margin-bottom: 64px;
   margin-bottom: 4rem;
-  color: #141414;
+  color: #000000;
   font-size: 12px;
   font-size: 0.75rem;
   font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -156,7 +156,7 @@ body {
     .parallax .headline h1 {
       font-size: 16rem;
       color: rgba(255, 255, 255, 0.85);
-      text-shadow: rgba(20, 20, 20, 0.7) 0 1px 0;
+      text-shadow: rgba(0, 0, 0, 0.7) 0 1px 0;
       position: relative; }
       @media only screen and (min-width: 40.063em) {
         .parallax .headline h1 {
@@ -187,8 +187,7 @@ body {
     @media only screen and (min-width: 64.063em) {
       #nav .logo-nav {
         padding-left: 0;
-        height: 79.008px;
-        height: 4.938rem;
+        height: 76px;
         overflow: hidden; } }
     #nav .logo-nav #logo {
       position: relative;
@@ -275,7 +274,7 @@ body {
             display: inline;
             width: auto;
             text-align: right;
-            height: 79px;
+            height: 76px;
             border: 0; } }
         #nav .sub-nav dl dd a {
           padding: 8px 32px;
@@ -370,7 +369,7 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(20, 20, 20, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer; }
   #portfolio .block-list li {
@@ -417,7 +416,7 @@ section {
     font-weight: bold; }
 
 /* =============================================================
-@   ## Team
+@   ## Contact Form
    ============================================================= */
 #contact {
   background-image: url("../img/contact.jpg");
@@ -456,16 +455,8 @@ footer {
 @   ## footer
    ============================================================= */
 footer {
-  background: #EDEDED;
+  background: #EBEBEB;
   color: #AAAAAA;
-  font-size: .875rem; }
+  font-size: 0.875rem; }
   footer .row div {
-    padding-top: 15px;
-    padding-bottom: 12px; }
-    footer .row div.newsletter {
-      padding-top: 7px;
-      padding-bottom: 7px; }
-      footer .row div.newsletter input {
-        height: 1.7rem;
-        margin-bottom: 0;
-        font-size: .75rem; }
+    padding: 0.9375rem 0; }

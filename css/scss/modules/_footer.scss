@@ -1,6 +1,7 @@
+// ------------------------------------------------------------
 // File Name: _footer.scss
 // Description: global footer styles
-// Used by: Page.scss
+// Used by: global.scss
 // Dependencies:
 // ------------------------------------------------------------
 
@@ -9,13 +10,11 @@
    ============================================================= */
 
 footer {
-	background:#EDEDED;
-	color:#AAAAAA;
-	font-size:.875rem;
+	background: $color-bg-grey;
+	color: $grey-light2;
+	font-size: $font-size-2;
 
-	.row div {padding-top:15px;padding-bottom:12px;
-		&.newsletter {padding-top:7px;padding-bottom:7px;
-			input {height:1.7rem;margin-bottom:0;font-size:.75rem;}
-		}
+	.row div {
+		padding:$spacing 0;
 	}
 }

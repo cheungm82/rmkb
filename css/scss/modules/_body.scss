@@ -1,3 +1,4 @@
+// ------------------------------------------------------------
 // File Name: _body.scss
 // Description: body styles
 // Used by: global.scss
@@ -62,13 +63,13 @@ section {
 	.block-list li {
 		position: relative;
 		text-align: center;
-		border: 1px solid $color-border-light4;
+		border: 1px solid $color-border;
 		padding: 0;
 		// cursor: pointer;
 
 		.folio_img {
 			padding: $spacing*2;
-			background: $color-bg-grey-light5;
+			background: $color-bg-grey;
 			img {
 				max-width: 400px;
 				max-height: 90px;
@@ -164,7 +165,7 @@ section {
 }
 
 /* =============================================================
-@   ## Team
+@   ## Contact Form
    ============================================================= */
 #contact {
 	background-image: url('../img/contact.jpg');
@@ -189,14 +190,14 @@ section {
 	input, textarea {
 		background: transparent;
 		border: 0;
-		border-bottom: 1px solid $color-border-light2;
+		border-bottom: 1px solid $color-border-dark1;
 		box-shadow: none;
 		padding-left: $spacing;
 		color: $white;
 	}
 
 	#submit {
-		border: 1px solid $color-border-light2;
+		border: 1px solid $color-border-dark1;
 		@include rem("padding", $spacing, $spacing*3);
 		@include hoverFocus("background", $color-primary);
 		@include hoverFocus("color", $white);

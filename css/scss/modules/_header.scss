@@ -1,3 +1,4 @@
+// ------------------------------------------------------------
 // File Name: _header.scss
 // Description: global header styles
 // Used by: global.scss
@@ -99,7 +100,7 @@ body {
 		padding-left: $spacing*2;
 		@include min-breakpoint(64.063) { // Large Screens
 			padding-left: 0;
-			@include rem("height", 4.938);
+			height: 76px;
 			overflow: hidden;
 		}
 
@@ -144,7 +145,7 @@ body {
 		}
 
 		#mobile-menu-trigger {
-			color: $black;
+			color: $color-text;
 			font-size: $font-size-4;
 			@include rem("line-height", $spacing*3);
 			@include min-breakpoint(40.063) { // Medium Screens
@@ -188,13 +189,13 @@ body {
 				text-align: left;
 				height: auto;
 				margin: 0;
-				border-bottom: 1px solid $color-border-light4;
+				border-bottom: 1px solid $color-border;
 
 				@include min-breakpoint(64.063) { // Large Screens
 					display: inline;
 					width: auto;
 					text-align: right;
-					height: 79px;
+					height: 76px;
 					border: 0;
 				}
 
@@ -207,7 +208,7 @@ body {
 					text-transform: uppercase;
 					border-bottom: 2px solid transparent;
 					border-radius: 0;
-					color: $black;
+					color: $color-text;
 					@include rem("font-size", $font-size-3);
 					@include single-transition(all, 0.3s, ease, 0s);
 					@include min-breakpoint(64.063) { // Large Screens
@@ -231,8 +232,8 @@ body {
 				}
 
 				&.active a {
-					background: $color-bg-grey-light5;
-					@include hoverFocus("color", $black);
+					background: $color-bg-grey;
+					@include hoverFocus("color", $color-text);
 
 					@include min-breakpoint(64.063) { // Large Screens
 						background: transparent;
