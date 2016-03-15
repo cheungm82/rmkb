@@ -75,7 +75,7 @@ $(function(){
 		'img/team/benson2.jpg'
 	]);
 
-	console.log('Type "our rmkb" for a little surprise. =D');
+	console.log('Type "ourrmkb" for a little surprise. =D');
 });
 
 
@@ -93,24 +93,24 @@ $(document).keydown(function(e) {
 	if(e.keyCode == 79 || down.length >= 9){down = [];}
 	if(e.keyCode != 16){down.push(e.keyCode);}
 }).keyup(function(e) {
-	console.log(down);
-	if(down[0] == 79 && down[1] == 85 && down[2] == 82 && down[3] == 32){
+	// console.log(down);
+	if(down[0] == 79 && down[1] == 85 && down[2] == 82){ // ourrmkb
 		teamli = $("#team ul");
-		if(!down[4]){
+		if(!down[3]){
+		} else if(down[3] == 82 && !down[4]){ // R
 			$(document).scrollTop( $("#team").offset().top );
-		} else if(down[4] == 82 && !down[5]){ // R
 			teamli.children(":nth-child(1)").find("span img").attr("src","img/team/ronald2.jpg");
-		} else if(down[4] == 82 && down[5]== 77 && !down[6]){ // M
+		} else if(down[3] == 82 && down[4]== 77 && !down[5]){ // M
 			teamli.children(":nth-child(2)").find("span img").attr("src","img/team/michael2.jpg");
-		} else if(down[4] == 82 && down[5]== 77 && down[6] == 75 && !down[7]){ // K
+		} else if(down[3] == 82 && down[4]== 77 && down[5] == 75 && !down[6]){ // K
 			teamli.children(":nth-child(3)").find("span img").attr("src","img/team/kevin2.jpg");
-		} else if(down[4] == 82 && down[5]== 77 && down[6] == 75 && down[7] == 66){ // B
+		} else if(down[3] == 82 && down[4]== 77 && down[5] == 75 && down[6] == 66){ // B
 			teamli.children(":nth-child(4)").find("span img").attr("src","img/team/benson2.jpg");
 		}
 
 	}
-	if(down[5] == 82 && down[6] == 77 && down[7] == 75 && down[8] == 66){
-
+	if(down[7] == 82 && down[8] == 77 && down[9] == 75 && down[10] == 66){
+		// do something if finished
 	}
 });
 
